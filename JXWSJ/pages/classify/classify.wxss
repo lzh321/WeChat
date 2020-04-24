@@ -1,0 +1,15 @@
+/* pages/classify/classify.wxss */
+.classify{
+  height: 100%;
+}
+.search{
+  padding: 30rpx 50rpx;
+  background: #eee;
+}
+.search-item{
+  display: flex;
+  align-items: center;
+  padding: 10rpx 40rpx;
+  background:white;
+  border-radius: 10rpx;
+}

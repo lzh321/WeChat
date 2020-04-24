@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+
+  <input type="text" auto-focus placeholder="请输入账号" class="input name"/>
+  <input type="text" password placeholder="请输入密码" class="input pwd" />
+  <view class="yz">
+  <input type="text" placeholder="请输入验证码" class="inputyzm" />
+  <text class="yzm" bindtap="getRandom">{{yzm}}</text>
+  </view>  
+  <button class="btn">登录</button>
+  <navigator class="goregister" hover-class url="../register/register">立即注册...</navigator>
+</view>

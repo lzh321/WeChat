@@ -1,0 +1,27 @@
+<!--pages/navBar/navBar.wxml-->
+<scroll-view class="scroll-view" bindscrolltoupper="upper">
+  <view class='wrapper'>
+      <view
+      wx:for="{{item}}"
+      class='wrapper-item {{currentData == item.id ? "tabBorer" : ""}}'
+      data-current = "{{item.id}}"
+      wx:key="{{item.id}}"
+      bindtap='checkCurrent'
+      >
+        {{item.title}}
+      </view>
+    
+  </view>
+  <swiper class="swiper" current="{{currentData}}" bindchange="bindchange">
+    <swiper-item class="swiper-item" wx:for="{{item}}" wx:key="{{item.id}}">
+      <navigator hover-class url="../detailpage/detailpage" class="list" wx:for="{{list}}" wx:key="{{index}}">
+        <image src="{{item.imgUrl}}" class="img" />
+        <view class="title">{{item.title}}</view>
+        <view class="price">
+          <text>￥{{item.price}}</text>
+          <text class="sales">销量:{{item.sales}}</text>
+        </view>
+      </navigator>
+    </swiper-item>   
+  </swiper>
+</scroll-view>

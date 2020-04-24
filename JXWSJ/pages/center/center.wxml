@@ -1,0 +1,24 @@
+<!--pages/center/center.wxml-->
+<view class="center">
+  <view class="head">
+    <image src="../../images/centerImg/bj.png" class="bj" />
+    <view class="name" >
+      <image class="head-img" src="../../images/centerImg/hand.png" mode="cover" wx:if="{{!hasUserInfo && canIUse}}" />
+      <button class="btn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+      <block wx:else>
+        <image class="head-img" src="{{userInfo.avatarUrl}}" mode="cover" />
+        <text class="head-name">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+  <view class="list" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="list-title">{{item.name}}</view>
+    <view class="list-item">
+      <navigator hover-class url="/" class="item" wx:for="{{item.myOrder}}" wx:key="{{item.id}}">
+        <text class="iconfont {{item.icon}} icon"></text>
+        <text class="text">{{item.title}}</text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

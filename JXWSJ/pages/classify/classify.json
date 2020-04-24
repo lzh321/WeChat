@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navBar":"../navBar/navBar"
+  },
+  "navigationBarTitleText": "分类",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,71 @@
+<!--pages/index/index.wxml-->
+<view class="home">
+  <swiper 
+  class="swiper"
+  indicator-dots
+  autoplay
+  indicator-color="white"
+  circular
+  interval="3000"
+  > 
+    <swiper-item class="swiper-item">
+      <image src="../../images/homeImg/banner1.png" class="slide-image" />
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <image src="../../images/homeImg/banner2.png" class="slide-image" />
+    </swiper-item>
+  </swiper>
+
+  <view class="discount">
+    <view class="discount-left">
+      <view class="discount-left-text">
+        <text class="tc">同城专人配送</text>
+        <text class="tc-time">2小时</text>
+      </view>
+      <image src="../../images/homeImg/tc.png" class="tc-img" />
+      </view>
+    <view class="discount-right">
+      <view class="discount-right-top">
+        <view class="item">
+          <text class="item-text">每周优惠</text>
+          <text class="item-t">特惠鲜花限时抢</text>
+        </view>
+        <image src="../../images/homeImg/yh.png" class="item-img" />
+      </view> 
+      <view class="discount-right-bottom">
+        <view class="item">
+          <text class="item-text2">优惠券领取</text>
+          <text class="item-t">领取最新优惠</text>
+        </view>
+        <image src="../../images/homeImg/yh2.png" class="item-img" />
+      </view>   
+    </view>
+  </view>
+
+  <view>
+
+    <view wx:for="{{list}}" wx:key="{{index}}">
+      <navigator hover-class url="../detailpage/detailpage" class="main" wx:if="{{item.id%2 !== 0}}">
+        <view class="main-item">
+          <image src="{{item.imgUrl}}" class="main-img" />
+        </view>
+        <view class="main-describe">
+          <text class="name">{{item.name}}</text>
+          <text class="aiq">{{item.title}}</text>
+          <text class="aiq">{{item.titleEnglish}}</text>
+      </view>
+      </navigator>
+      <navigator hover-class url="../detailpage/detailpage" class="main main2" wx:else>
+        <view class="main-item2">
+          <image src="{{item.imgUrl}}" class="main-img2" />
+        </view>
+        <view class="main-describe">
+          <text class="name">{{item.name}}</text>
+          <text class="aiq">{{item.title}}</text>
+          <text class="aiq">{{item.titleEnglish}}</text>
+      </view>
+      </navigator>
+    </view>
+
+  </view>  
+</view>

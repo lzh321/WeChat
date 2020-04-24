@@ -1,0 +1,13 @@
+/* pages/shoppingCart/shoppingCart.wxss */
+.shopping{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200rpx;
+}
+image{
+  width: 300rpx;
+  height: 300rpx;
+  margin-bottom: 20rpx;
+}

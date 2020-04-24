@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper>
+    <block wx:for="{{list}}">
+      <swiper-item>
+        <view class='item'>{{item.name}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
