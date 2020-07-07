@@ -12,15 +12,15 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "backgroundColor": "#fff",
     "navigationBarTitleText": "我的"
   },
   "tabBar": {
     "color": "#444444",
     "selectedColor": "#444444",
-    "borderStyle": "#cccccc",
-    "position":"bottom",
+    "borderStyle": "white",
+    "position": "bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -47,5 +47,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

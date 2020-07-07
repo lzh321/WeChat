@@ -1,2 +1,5 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="pages">
+  <textarea placeholder="请输入"></textarea>
+  <text>pages/search/search.wxml</text>
+</view>

@@ -1,1 +1,4 @@
 /* pages/search/search.wxss */
+.pages{
+  height: 2000rpx;
+}
