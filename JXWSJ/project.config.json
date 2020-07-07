@@ -71,9 +71,14 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "search",
 					"pathName": "pages/search/search",
 					"query": "",
+=======
+					"name": "首页",
+					"pathName": "pages/index/index",
+>>>>>>> c1e83e473cedeb4d0d574e5ebd14c229ce17363c
 					"scene": null
 				}
 			]

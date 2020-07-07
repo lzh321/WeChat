@@ -1,0 +1,43 @@
+/* pages/login/login.wxss */
+.login{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.input{
+  border: 2rpx solid #ccc;
+  margin-bottom:20rpx;
+  width: 80%;
+  font-size: 30rpx; 
+  padding: 20rpx;
+}
+.yz{
+  width: 86%;
+  display: flex;
+}
+.inputyzm{
+  border: 2rpx solid #ccc;
+  margin-bottom:20rpx;
+  width: 60%;
+  font-size: 30rpx; 
+  padding: 20rpx;
+}
+.yzm{
+  text-align: center;
+  flex: 1;
+  height: 85rpx;
+  border: 2rpx solid #f44;
+  margin-left: 10rpx;
+  line-height: 85rpx;
+  font-size: 35rpx;
+  font-style: italic;
+  letter-spacing: 10rpx;
+}
+.btn{
+  margin-top: 30rpx;
+  width:70%;
+}
+.goregister{
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
