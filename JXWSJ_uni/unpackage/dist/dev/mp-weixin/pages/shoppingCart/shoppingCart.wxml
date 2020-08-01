@@ -1,1 +1,0 @@
-<view class="shopping"><image src="/static/images/shopping.png"></image><view class="text">还没有商品哦~</view><navigator class="goShopping" open-type="switchTab" url="../index/index">去购物</navigator></view>

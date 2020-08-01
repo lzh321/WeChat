@@ -1,1 +1,0 @@
-<view class="classify"><view data-event-opts="{{[['tap',[['goSearchPage',['$event']]]]]}}" class="search" bindtap="__e"><view class="search-item"><icon type="search" size="30rpx"></icon><text style="font-size:30rpx;color:#666;margin-left:10rpx;">请输入搜索内容</text></view></view><nav-bar vue-id="91ba9280-1" bind:__l="__l"></nav-bar></view>
