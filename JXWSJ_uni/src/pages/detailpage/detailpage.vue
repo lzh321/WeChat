@@ -16,7 +16,9 @@ export default {
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {},
+  onLoad: function (e) {
+    console.log(JSON.parse(e.data))
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

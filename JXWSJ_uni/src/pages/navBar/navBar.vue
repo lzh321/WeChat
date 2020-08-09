@@ -9,14 +9,14 @@
   </view>
   <swiper class="swiper" :current="currentData" @change="bindchange">
     <swiper-item v-for="(item, index) in item" :key="index" class="swiper-item">
-      <navigator v-for="(item, index2) in list" :key="index2" hover-class url="../detailpage/detailpage" class="list">
+      <view v-for="(item, index2) in list" :key="index2" hover-class @click="detail(item)" class="list">
         <image :src="item.imgUrl" class="img"></image>
         <view class="title">{{item.title}}</view>
         <view class="price">
           <text>￥{{item.price}}</text>
           <text class="sales">销量:{{item.sales}}</text>
         </view>
-      </navigator>
+      </view>
     </swiper-item>   
   </swiper>
 </scroll-view>
@@ -77,7 +77,7 @@ export default {
         "sales": 0
       }],
       currentTab: 0,
-      currentData: ''
+      currentData: '',
     };
   },
 
@@ -106,6 +106,11 @@ export default {
           currentData: e.target.dataset.current
         });
       }
+    },
+    detail(item){
+      uni.navigateTo({
+        url: '../detailpage/detailpage?data='+ JSON.stringify(item)
+      })
     },
 
     upper(e) {
