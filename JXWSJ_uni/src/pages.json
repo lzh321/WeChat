@@ -49,6 +49,12 @@
 			"style": {
 				"navigationBarTitleText": "注册"
 			}
+		},
+		{
+			"path": "pages/BMI/BMI",
+			"style": {
+				"navigationBarTitleText": "BMI"
+			}
 		}
 	],
 	"tabBar": {

@@ -4,10 +4,12 @@
 </template>
 
 <script>
-
+const app = getApp();
 export default {
   data() {
-    return {};
+    return {
+      title: ''
+    };
   },
 
   components: {},
@@ -16,8 +18,24 @@ export default {
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (e) {
-    console.log(JSON.parse(e.data))
+  onLoad: function () {
+    console.log(app.globalData.userInfo)
+    if(!app.globalData.userInfo){
+      this.title = '未登录'
+      uni.showModal({
+        title: '提示',
+        content: '未登录',
+        success: function (res) {
+            if (res.confirm) {
+              uni.navigateTo({url: '../login/login'})
+            } else if (res.cancel) {
+              console.log('用户点击取消');
+            }
+        }
+      })
+    }else{
+      this.title = '登录成功'
+    }
   },
 
   /**

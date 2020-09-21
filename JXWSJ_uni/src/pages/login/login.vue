@@ -2,19 +2,20 @@
 <!--pages/login/login.wxml-->
 <view class="login">
 
-  <input type="text" auto-focus placeholder="请输入账号" class="input name"></input>
-  <input type="text" password placeholder="请输入密码" class="input pwd"></input>
+  <input type="text" auto-focus placeholder="请输入账号" class="input name"/>
+  <input type="text" password placeholder="请输入密码" class="input pwd"/>
   <view class="yz">
-  <input type="text" placeholder="请输入验证码" class="inputyzm"></input>
+  <input type="text" placeholder="请输入验证码" class="inputyzm"/>
   <text class="yzm" @tap="getRandom">{{yzm}}</text>
   </view>  
   <button class="btn">登录</button>
+  <button class="btn"  open-type="getUserInfo" @getuserinfo="getUserInfo">微信授权登录</button>
   <navigator class="goregister" hover-class url="../register/register">立即注册...</navigator>
 </view>
 </template>
 
 <script>
-
+const app = getApp();
 export default {
   data() {
     return {
@@ -91,8 +92,12 @@ export default {
       _this.setData({
         yzm: yzm
       });
-    }
-
+    },
+    getUserInfo: function (e) {
+      console.log(e);
+      app.globalData.userInfo = e.detail.userInfo;
+      uni.navigateBack({delta:1})
+    },
   }
 };
 </script>
