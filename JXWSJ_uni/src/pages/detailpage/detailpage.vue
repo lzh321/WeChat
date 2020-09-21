@@ -1,6 +1,8 @@
 <template>
 <!--pages/detailpage/detailpage.wxml-->
-<text>pages/detailpage/detailpage.wxml</text>
+<view>
+  <text>{{title}}</text>
+</view>
 </template>
 
 <script>
@@ -18,7 +20,19 @@ export default {
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
+  onLoad(){
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {},
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
     console.log(app.globalData.userInfo)
     if(!app.globalData.userInfo){
       this.title = '未登录'
@@ -37,16 +51,6 @@ export default {
       this.title = '登录成功'
     }
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {},
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏
@@ -72,7 +76,8 @@ export default {
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {},
-  methods: {}
+  methods: {
+  }
 };
 </script>
 <style>

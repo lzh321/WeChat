@@ -96,6 +96,7 @@ export default {
     getUserInfo: function (e) {
       console.log(e);
       app.globalData.userInfo = e.detail.userInfo;
+      wx.setStorageSync('token', e.detail.userInfo.nickName);
       uni.navigateBack({delta:1})
     },
   }

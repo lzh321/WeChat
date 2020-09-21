@@ -101,7 +101,7 @@ export default {
   onLoad: function () {
 
   },
-  
+
   onShow: function () {
     if (app.globalData.userInfo) {
       console.log(1)
@@ -145,6 +145,7 @@ export default {
     getUserInfo: function (e) {
       console.log(e);
       app.globalData.userInfo = e.detail.userInfo;
+      wx.setStorageSync('token', e.detail.userInfo.nickName);
       this.setData({
         userInfo: e.detail.userInfo,
         hasUserInfo: true
